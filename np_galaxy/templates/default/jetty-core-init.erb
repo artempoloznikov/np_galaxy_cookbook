@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$1" in
+       start)
+                sudo -u <%= @jetty_user %> <%= @jetty_home %>/bin/jetty.sh start
+                ;;
+       stop)
+                sudo -u <%= @jetty_user %> <%= @jetty_home %>/bin/jetty.sh stop 
+                ;;
+       restart)
+                sudo -u <%= @jetty_user %> <%= @jetty_home %>/bin/jetty.sh stop
+                sudo -u <%= @jetty_user %> <%= @jetty_home %>/bin/jetty.sh start
+                ;;
+esac
+exit 0
