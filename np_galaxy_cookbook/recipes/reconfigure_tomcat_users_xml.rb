@@ -1,4 +1,4 @@
-template "#{node[:np_galaxy_cookbook][:tomcat][:home]}/etc/tomcat7/tomcat-users.xml" do
+template "/etc/tomcat7/tomcat-users.xml" do
       cookbook "np_galaxy_cookbook"
       source 'tomcat-users.xml.erb'
       mode '0640'
