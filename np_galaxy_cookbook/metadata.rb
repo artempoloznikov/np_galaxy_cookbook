@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.10"
+version          "13.5.11"
 
 #supports "centos"
 #supports "redhat"
@@ -89,7 +89,7 @@ attribute "np_galaxy_cookbook/tomcat/password",
   :display_name => "tomcat password",
   :description => "The password",
   :required => "optional",
-  :default => "***",
+#  :default => "***",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
   ]
@@ -98,7 +98,7 @@ attribute "np_galaxy_cookbook/tomcat/user",
   :display_name => "tomcat system user",
   :description => "Tomcat system user",
   :required => "optional",
-  :default => "tomcat",
+#  :default => "tomcat",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
   ]
@@ -107,7 +107,7 @@ attribute "np_galaxy_cookbook/tomcat/group",
   :display_name => "Tomcat system grop",
   :description => "Tomcat group",
   :required => "optional",
-  :default => "tomcat",
+#  :default => "tomcat",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
   ]
