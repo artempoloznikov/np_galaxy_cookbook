@@ -13,154 +13,154 @@ supports "ubuntu"
 #depends "repo"
 depends "rightscale"
 
-#recipe "np_galaxy::install_tomcat",
+#recipe "np_tomcat::install_tomcat",
 #  "Install the necessary packages, deployment tomcat, build and install init scripts."
 
-#recipe "np_galaxy::reconfigure_scripts",
+#recipe "np_tomcat::reconfigure_scripts",
 #  "Rebuild and install init scripts."
 
-#recipe "np_galaxy::reconfigure_tomcat_xml",
+#recipe "np_tomcat::reconfigure_tomcat_xml",
 #  "Reconfigure tomcat.xml config file."
 
-#recipe "np_galaxy::reconfigure_npserver_properties",
+#recipe "np_tomcat::reconfigure_npserver_properties",
 #  "Reconfigure npserver.properties config file."
 
-recipe "np_galaxy::start_tomcat",
+recipe "np_tomcat::start_tomcat",
   "Start and enable tomcat service"
 
-recipe "np_galaxy::stop_tomcat",
+recipe "np_tomcat::stop_tomcat",
   "Stop and disable tomcat service"
 
-recipe "np_galaxy::restart_tomcat",
+recipe "np_tomcat::restart_tomcat",
   "restart tomcat service"
 
 
 # == Default attributes
 
-#attribute "np_galaxy/s3_access_key",
+#attribute "np_tomcat/s3_access_key",
 #  :display_name => "s3 access_key",
 #  :description => "",
 #  :required => "required",
 #  :default => "",
 #  :recipes => [
-#    "np_galaxy::install_tomcat"
+#    "np_tomcat::install_tomcat"
 #  ]
 
-#attribute "np_galaxy/s3_secret_key",
+#attribute "np_tomcat/s3_secret_key",
 #  :display_name => "s3 secret_key",
 #  :description => "",
 #  :required => "required",
 ##  :default => "",
 #  :recipes => [
-#    "np_galaxy::install_tomcat"
+#    "np_tomcat::install_tomcat"
 #  ]
 
-#attribute "np_galaxy/s3_bucket_name",
+#attribute "np_tomcat/s3_bucket_name",
 #  :display_name => "s3 bucket",
 #  :description => "s3 bucket name for installation files",
 #  :required => "required",
 #  :default => "np-titan-tomcat-install",
 #  :recipes => [
-#    "np_galaxy::install_tomcat"
+#    "np_tomcat::install_tomcat"
 #  ]
 
-#attribute "np_galaxy/java_instdir",
+#attribute "np_tomcat/java_instdir",
 #  :display_name => "java installation directory",
 #  :description => "The path to java installation directory",
 #  :required => "optional",
 #  :default => "/usr/java",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/home",
+#attribute "np_tomcat/tomcat/home",
 #  :display_name => "tomcat home directory",
 #  :description => "The path...",
 #  :required => "recommended",
 #  :default => "/usr/local/tomcat-core",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/tmp",
+#attribute "np_tomcat/tomcat/tmp",
 #  :display_name => "tomcat temp directory",
 #  :description => "The path...",
 #  :required => "optional",
 #  :default => "/usr/local/tomcat-core/tmp",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/pid_file",
+#attribute "np_tomcat/tomcat/pid_file",
 #  :display_name => "tomcat PID file",
 #  :description => "The path...",
 #  :required => "optional",
 #  :default => "/usr/local/tomcat-core/tmp/tomcat.pid",
 #  :recipes => [
-#    "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#    "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/logs",
+#attribute "np_tomcat/tomcat/logs",
 #  :display_name => "tomcat logs path",
 #  :description => "The path...",
 #  :required => "optional",
 #  :default => "/mnt/ephemeral/tomcat-logs",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/user",
+#attribute "np_tomcat/tomcat/user",
 #  :display_name => "tomcat service user",
 #  :description => "The path...",
 #  :required => "optional",
 #  :default => "tomcat",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/group",
+#attribute "np_tomcat/tomcat/group",
 #  :display_name => "tomcat service group",
 #  :description => "service group",
 #  :required => "optional",
 #  :default => "tomcat",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/java_xms",
+#attribute "np_tomcat/tomcat/java_xms",
 #  :display_name => "java Xms parameter",
 #  :description => "",
 #  :required => "optional",
 #  :default => "256m",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat/java_xmx",
+#attribute "np_tomcat/tomcat/java_xmx",
 #  :display_name => "java Xmx parameter",
 #  :description => "",
 #  :required => "optional",
 #  :default => "1200m",
 #  :recipes => [
-#               "np_galaxy::install_tomcat",
-#               "np_galaxy::reconfigure_scripts"
+#               "np_tomcat::install_tomcat",
+#               "np_tomcat::reconfigure_scripts"
 #  ]
 
-#attribute "np_galaxy/tomcat_xml/tomcat_port",
+#attribute "np_tomcat/tomcat_xml/tomcat_port",
 #  :display_name => "tomcat.port property in tomcat.xml",
 #  :description => "",
 #  :required => "optional",
 #  :default => "8080",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #              ]
 
 
@@ -172,122 +172,122 @@ recipe "np_galaxy::restart_tomcat",
 #dbconns.sort.each_with_index.map do |dbconn, index|
 #  [dbconn, index + 1]
 #end.each do |dbconn, number|
-#  grouping "np_galaxy/tomcat_xml/#{dbconn}",
+#  grouping "np_tomcat/tomcat_xml/#{dbconn}",
 #  :title => "DB connector #{number}",
 #  :description =>
 #    "Attributes for the DB connector #{dbconn}."
 #
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/id",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/id",
 #    :display_name => "DB connector id (#{number})",
 #    :description =>
 #      " ",
 #    :required => 'required',
-#    :recipes => ["np_galaxy::reconfigure_tomcat_xml"]
+#    :recipes => ["np_tomcat::reconfigure_tomcat_xml"]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/jdbc",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/jdbc",
 #    :display_name => "DB jdbc arg (#{number})",
 #    :description => "",
 #    :required => "recommended",
 #    :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #                ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/host",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/host",
 #    :display_name => "DB host (#{number})",
 #    :description => "",
 #    :required => "required",
 #    :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #                ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/port",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/port",
 #  :display_name => "DB port (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "3306",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/db_name",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/db_name",
 #  :display_name => "DB name (#{number})",
 #  :description => "",
 #  :required => "required",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/user",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/user",
 #  :display_name => "DB username (#{number})",
 #  :description => "",
 #  :required => "required",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/password",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/password",
 #  :display_name => "DB password (#{number})",
 #  :description => "",
 #  :required => "required",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/initialsize",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/initialsize",
 #  :display_name => "DB initialSize (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "10",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/maxactive",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/maxactive",
 #  :display_name => "DB maxActive (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "75",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/maxidle",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/maxidle",
 #  :display_name => "DB maxIdle (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "20",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/minidle",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/minidle",
 #  :display_name => "DB minIdle (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "10",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/maxwait",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/maxwait",
 #  :display_name => "DB maxWait (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "30000",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/validationquery",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/validationquery",
 #  :display_name => "DB validationQuery (#{number})",
 #  :description => "",
 #  :required => "optional",
 #  :default => "select 1",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/testonborrow",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/testonborrow",
 #  :display_name => "DB testOnBorrow (#{number})",
 #  :description => "",
 #  :required => "optional",
@@ -295,10 +295,10 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["true", "false"],
 #  :default => "true",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#  attribute "np_galaxy/tomcat_xml/#{dbconn}/testwhileidle",
+#  attribute "np_tomcat/tomcat_xml/#{dbconn}/testwhileidle",
 #  :display_name => "DB testWhileIdle (#{number})",
 #  :description => "",
 #  :required => "optional",
@@ -306,36 +306,36 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["true", "false"],
 #  :default => "true",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 #
 #end
 
-#attribute "np_galaxy/tomcat/contexts_dir",
+#attribute "np_tomcat/tomcat/contexts_dir",
 #  :display_name => "tomcat contexts dir",
 #  :description => "The path...",
 #  :required => "recommended",
 #  :default => "/contexts",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#attribute "np_galaxy/tomcat_xml/logs/requestlog_name",
+#attribute "np_tomcat/tomcat_xml/logs/requestlog_name",
 #  :display_name => "RequestLog filename",
 #  :description => "",
 #  :required => "optional",
 #  :default => "/yyyy_mm_dd.request.log",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
-#attribute "np_galaxy/tomcat_xml/logs/serverlog_name",
+#attribute "np_tomcat/tomcat_xml/logs/serverlog_name",
 #  :display_name => "ServerLog filename",
 #  :description => "",
 #  :required => "optional",
 #  :default => "/yyyy_mm_dd.server.log",
 #  :recipes => [
-#               "np_galaxy::reconfigure_tomcat_xml"
+#               "np_tomcat::reconfigure_tomcat_xml"
 #  ]
 
 ## inputs for npserver.properties config file
@@ -347,7 +347,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["dev", "qa", "stage", "prod"],
 #  :default => "qa",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 # Multiple MongoDB connectors (for npserver.properties conf)
@@ -367,7 +367,7 @@ recipe "np_galaxy::restart_tomcat",
 #    :description =>
 #      " ",
 #    :required => 'required',
-#    :recipes => ["np_galaxy::reconfigure_npserver_properties"]
+#    :recipes => ["np_tomcat::reconfigure_npserver_properties"]
 
 #  attribute "npserver_properties/#{mdbconn}/port",
 #    :display_name => "MongoDB port (#{number})",
@@ -375,7 +375,7 @@ recipe "np_galaxy::restart_tomcat",
 #      " ",
 #    :required => 'recommended',
 #    :default => '27017',
-#    :recipes => ["np_galaxy::reconfigure_npserver_properties"]
+#    :recipes => ["np_tomcat::reconfigure_npserver_properties"]
 #
 #end
 
@@ -384,7 +384,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :description => "",
 #  :required => "required",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/mongodb/numconns",
@@ -393,7 +393,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "recommended",
 #  :default => "500",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/mongodb/timeoutms",
@@ -402,7 +402,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "recommended",
 #  :default => "30000",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/log/emaillevel",
@@ -412,7 +412,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["none", "debug", "info", "warning", "error"],
 #  :default => "warning",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/log/emaildefaultlist",
@@ -421,7 +421,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "server-dev",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/log/emaildefaultqueuesecs",
@@ -430,7 +430,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "300",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/serverconfig/devicedownmins",
@@ -439,7 +439,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "30",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/serverconfig/indicatorperiodmins",
@@ -448,7 +448,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "5",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/serverconfig/alertperiodmins",
@@ -457,7 +457,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "5",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/log/timing",
@@ -467,7 +467,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["true", "false"],
 #  :default => "true",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/admin/support/slowlogsecs",
@@ -476,7 +476,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "120",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/db/debug",
@@ -486,7 +486,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["true", "false"],
 #  :default => "true",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/db/debug/startt",
@@ -496,7 +496,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :choice => ["true", "false"],
 #  :default => "true",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 #attribute "npserver_properties/server/db/debug/minms",
@@ -505,7 +505,7 @@ recipe "np_galaxy::restart_tomcat",
 #  :required => "optional",
 #  :default => "30000",
 #  :recipes => [
-#               "np_galaxy::reconfigure_npserver_properties"
+#               "np_tomcat::reconfigure_npserver_properties"
 #  ]
 
 
