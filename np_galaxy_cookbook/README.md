@@ -1,6 +1,3 @@
-# RightScale App Tomcat Cookbook
-
 ## DESCRIPTION:
 
-
-* test
+* tomcat cookbook

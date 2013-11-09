@@ -4,10 +4,10 @@
 
 #rightscale_marker
 
-service "jetty-core" do
+service "tomcat-core" do
   action :stop
 end
 
-service "jetty-core" do
+service "tomcat-core" do
   action :disable
 end
