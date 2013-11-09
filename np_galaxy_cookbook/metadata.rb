@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.11"
+version          "13.5.12"
 
 #supports "centos"
 #supports "redhat"
@@ -35,6 +35,9 @@ recipe "np_galaxy_cookbook::restart_tomcat",
   "restart tomcat service"
 
 recipe "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
+  "reconfigure tomcat-users.xml"
+
+recipe "np_galaxy_cookbook::reconfigure_netpulse_properties",
   "reconfigure tomcat-users.xml"
 
 # == Default attributes
