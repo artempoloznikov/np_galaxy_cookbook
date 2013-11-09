@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.2"
+version          "13.5.3"
 
 #supports "centos"
 #supports "redhat"
@@ -13,8 +13,8 @@ supports "ubuntu"
 #depends "repo"
 depends "rightscale"
 
-#recipe "np_galaxy_cookbook::install_tomcat",
-#  "Install the necessary packages, deployment tomcat, build and install init scripts."
+recipe "np_galaxy_cookbook::install_tomcat",
+  "Install the necessary packages, deployment tomcat, build and install init scripts."
 
 #recipe "np_galaxy_cookbook::reconfigure_scripts",
 #  "Rebuild and install init scripts."
@@ -37,32 +37,32 @@ recipe "np_galaxy_cookbook::restart_tomcat",
 
 # == Default attributes
 
-#attribute "np_galaxy_cookbook/s3_access_key",
-#  :display_name => "s3 access_key",
-#  :description => "",
-#  :required => "required",
-#  :default => "",
-#  :recipes => [
-#    "np_galaxy_cookbook::install_tomcat"
-#  ]
+attribute "np_galaxy_cookbook/s3_access_key",
+  :display_name => "s3 access_key",
+  :description => "",
+  :required => "required",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::install_tomcat"
+  ]
 
-#attribute "np_galaxy_cookbook/s3_secret_key",
-#  :display_name => "s3 secret_key",
-#  :description => "",
-#  :required => "required",
-##  :default => "",
-#  :recipes => [
-#    "np_galaxy_cookbook::install_tomcat"
-#  ]
+attribute "np_galaxy_cookbook/s3_secret_key",
+  :display_name => "s3 secret_key",
+  :description => "",
+  :required => "required",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::install_tomcat"
+  ]
 
-#attribute "np_galaxy_cookbook/s3_bucket_name",
-#  :display_name => "s3 bucket",
-#  :description => "s3 bucket name for installation files",
-#  :required => "required",
-#  :default => "np-titan-tomcat-install",
-#  :recipes => [
-#    "np_galaxy_cookbook::install_tomcat"
-#  ]
+attribute "np_galaxy_cookbook/s3_bucket_name",
+  :display_name => "s3 bucket",
+  :description => "s3 bucket name for installation files",
+  :required => "required",
+  :default => "np-titan-tomcat-install",
+  :recipes => [
+    "np_galaxy_cookbook::install_tomcat"
+  ]
 
 #attribute "np_galaxy_cookbook/java_instdir",
 #  :display_name => "java installation directory",
