@@ -41,7 +41,7 @@ attribute "np_galaxy_cookbook/s3_access_key",
   :display_name => "s3 access_key",
   :description => "",
   :required => "required",
-  :default => "",
+#  :default => "",
   :recipes => [
     "np_galaxy_cookbook::install_tomcat"
   ]
@@ -50,7 +50,7 @@ attribute "np_galaxy_cookbook/s3_secret_key",
   :display_name => "s3 secret_key",
   :description => "",
   :required => "required",
-  :default => "",
+#  :default => "",
   :recipes => [
     "np_galaxy_cookbook::install_tomcat"
   ]
@@ -59,7 +59,7 @@ attribute "np_galaxy_cookbook/s3_bucket_name",
   :display_name => "s3 bucket",
   :description => "s3 bucket name for installation files",
   :required => "required",
-  :default => "np-titan-tomcat-install",
+#  :default => "np-titan-tomcat-install",
   :recipes => [
     "np_galaxy_cookbook::install_tomcat"
   ]
