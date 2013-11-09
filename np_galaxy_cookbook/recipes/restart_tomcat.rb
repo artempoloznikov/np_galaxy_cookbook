@@ -4,6 +4,6 @@
 
 #rightscale_marker
 
-service "tomcat-core" do
+service "tomcat7" do
   action :restart
 end

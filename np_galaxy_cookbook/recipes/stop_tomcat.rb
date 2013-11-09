@@ -4,10 +4,10 @@
 
 #rightscale_marker
 
-service "tomcat-core" do
+service "tomcat7" do
   action :stop
 end
 
-service "tomcat-core" do
+service "tomcat7" do
   action :disable
 end
