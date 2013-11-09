@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.6"
+version          "13.5.7"
 
 #supports "centos"
 #supports "redhat"
@@ -93,6 +93,26 @@ attribute "np_galaxy_cookbook/tomcat/password",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
   ]
+
+attribute "np_galaxy_cookbook/tomcat/user",
+  :display_name => "tomcat system user",
+  :description => "Tomcat system user",
+  :required => "optional",
+  :default => "tomcat",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
+  ]
+
+attribute "np_galaxy_cookbook/tomcat/group",
+  :display_name => "Tomcat system grop",
+  :description => "Tomcat group",
+  :required => "optional",
+  :default => "tomcat",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_tomcat_users_xml",
+  ]
+      owner node[:np_galaxy_cookbook][:tomcat][:user]
+      group node[:np_galaxy_cookbook][:tomcat][:group]
 
 #attribute "np_galaxy_cookbook/java_instdir",
 #  :display_name => "java installation directory",
