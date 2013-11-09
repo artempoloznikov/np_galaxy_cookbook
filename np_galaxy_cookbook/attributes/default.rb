@@ -30,3 +30,8 @@ default[:np_galaxy_cookbook][:tomcat_xml][:tomcat_port] = "8080"
 default[:np_galaxy_cookbook][:tomcat_xml][:tomcat_port] = "8080"
 
 
+default[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_rolename] = "manager-gui"
+default[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_username] = "admin"
+default[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_password] = "secret_password"
+
+
