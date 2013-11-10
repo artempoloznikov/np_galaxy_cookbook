@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.15"
+version          "13.5.16"
 
 #supports "centos"
 #supports "redhat"
@@ -114,7 +114,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/site_host",
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/memcached_serverList",
+attribute "np_galaxy_cookbook/netpulse_properties/memcached_server_list",
   :display_name => "memcached_serverList",
   :description => "memcached serverList",
   :required => "optional",
@@ -123,7 +123,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/memcached_serverList",
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/embeddedActivemq_dataDirectory",
+attribute "np_galaxy_cookbook/netpulse_properties/embedded_activemq_data_directory",
   :display_name => "embeddedActivemq_dataDirectory",
   :description => "embeddedActivemq_dataDirectory",
   :required => "optional",
@@ -150,7 +150,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/workout_error_path",
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/alerts_workoutErrorThreshold",
+attribute "np_galaxy_cookbook/netpulse_properties/alerts_workout_error_threshold",
   :display_name => "alerts_workoutErrorThreshold",
   :description => "alerts_workoutErrorThreshold",
   :required => "optional",
@@ -159,7 +159,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/alerts_workoutErrorThreshold",
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/workout_manualCsDistributionList",
+attribute "np_galaxy_cookbook/netpulse_properties/workout_manual_cs_distributionList",
   :display_name => "workout_manualCsDistributionList",
   :description => "workout_manualCsDistributionList",
   :required => "optional",
