@@ -159,7 +159,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/alerts_workout_error_threshold
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/workout_manual_cs_distributionList",
+attribute "np_galaxy_cookbook/netpulse_properties/workout_manual_cs_distribution_list",
   :display_name => "workout_manualCsDistributionList",
   :description => "workout_manualCsDistributionList",
   :required => "optional",
@@ -168,7 +168,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/workout_manual_cs_distribution
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/workout_error_distributionList",
+attribute "np_galaxy_cookbook/netpulse_properties/workout_error_distribution_list",
   :display_name => "workout_error_distributionList",
   :description => "workout_error_distributionList",
   :required => "optional",

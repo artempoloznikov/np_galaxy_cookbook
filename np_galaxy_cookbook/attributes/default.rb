@@ -43,8 +43,8 @@ default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_embedded_activemq_dat
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_image_path] = "/mnt/tomcat/workout_image_data"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_error_path] = "/mnt/tomcat/workout_error_data"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_alerts_workout_error_threshold] = "15"
-default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_manual_cs_distributionList] = "ncasuga@netpulse.com"
-default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_error_distributionList] = "ncasuga@netpulse.com"
+default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_manual_cs_distribution_list] = "ncasuga@netpulse.com"
+default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_error_distribution_list] = "ncasuga@netpulse.com"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_email_enabled] = "true"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_partner_fitstudio_key] = "secret_key"
 
