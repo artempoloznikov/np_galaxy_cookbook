@@ -116,7 +116,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/site_host",
 
 attribute "np_galaxy_cookbook/netpulse_properties/memcached_serverList",
   :display_name => "memcached_serverList",
-  :description => "memcached.serverList",
+  :description => "memcached serverList",
   :required => "optional",
   :default => "dev-app-1.netpulse.ws:11211,dev-app-2.netpulse.ws:11211",
   :recipes => [
@@ -168,7 +168,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/workout_manualCsDistributionLi
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-attribute "np_galaxy_cookbook/netpulse_properties/",
+attribute "np_galaxy_cookbook/netpulse_properties/workout_error_distributionList",
   :display_name => "workout_error_distributionList",
   :description => "workout_error_distributionList",
   :required => "optional",
