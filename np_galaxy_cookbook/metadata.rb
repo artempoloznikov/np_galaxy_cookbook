@@ -272,19 +272,5 @@ attribute "np_galaxy_cookbook/server_xml/db3_password",
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
 
-attribute "np_galaxy_cookbook/server_xml/db4_url",
-  :display_name => "db4_url",
-  :description => "db4_url",
-  :required => "recommended",
-  :default => "",
-  :recipes => [
-    "np_galaxy_cookbook::reconfigure_server_xml"
-  ]
-
-#		:static_member_port => node[:np_galaxy_cookbook][:tomcat][:static_member_port],
-#		:static_member_secure_port => node[:np_galaxy_cookbook][:tomcat][:static_member_secure_port],
-#		:static_member_host => node[:np_galaxy_cookbook][:tomcat][:static_member_host],
-#		:static_member_domain => node[:np_galaxy_cookbook][:tomcat][:static_member_domain],
-#		:static_member_unique_id => node[:np_galaxy_cookbook][:tomcat][:static_member_unique_id]
 
 end
