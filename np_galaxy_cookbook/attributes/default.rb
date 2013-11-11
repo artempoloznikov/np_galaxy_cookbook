@@ -11,12 +11,6 @@
 
 # Recommended attributes
 
-default[:np_galaxy_cookbook][:s3_access_key] = ""
-default[:np_galaxy_cookbook][:s3_secret_key] = ""
-default[:np_galaxy_cookbook][:s3_bucket_name] = "np-titan-tomcat-install"
-
-default[:np_galaxy_cookbook][:java_instdir] = "/usr/java"
-
 default[:np_galaxy_cookbook][:tomcat][:home] = "/mnt/ephemeral/tomcat7"
 default[:np_galaxy_cookbook][:tomcat][:conf] = "/etc/tomcat7"
 default[:np_galaxy_cookbook][:tomcat][:tmp] = "/tmp"
