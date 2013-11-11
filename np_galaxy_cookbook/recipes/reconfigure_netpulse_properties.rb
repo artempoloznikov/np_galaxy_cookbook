@@ -5,10 +5,6 @@ template "#{node[:np_galaxy_cokbook][:tomcat][:conf]}/netpulse.properties" do
       owner node[:np_galaxy_cookbook][:tomcat][:user]
       group node[:np_galaxy_cookbook][:tomcat][:group]
       variables(
-            :tomcat_rolename => node[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_rolename],
-            :tomcat_username => node[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_username],
-            :tomcat_password => node[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_password],
-
             :tomcat_env = node[:np_galaxy_cookbook][:netpulse_properties][:env],
             :tomcat_workout_summary_test_mode = node[:np_galaxy_cookbook][:netpulse_properties][:workout_summary_test_mode],
             :tomcat_workout_summary_job_status = node[:np_galaxy_cookbook][:netpulse_properties][:workout_summary_job_status],
