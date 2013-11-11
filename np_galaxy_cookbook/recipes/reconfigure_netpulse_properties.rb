@@ -1,4 +1,4 @@
-template "#{node[:np_galaxy_cokbook][:tomcat][:conf]}/netpulse.properties" do
+template "#{node[:np_galaxy_cookbook][:tomcat][:conf]}/netpulse.properties" do
       cookbook "np_galaxy_cookbook"
       source 'netpulse.properties.erb'
       mode '0644'

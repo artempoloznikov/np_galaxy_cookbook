@@ -1,4 +1,4 @@
-template "#{node[:np_galaxy_cokbook][:tomcat][:conf]}/server.xml" do
+template "#{node[:np_galaxy_cookbook][:tomcat][:conf]}/server.xml" do
       cookbook "np_galaxy_cookbook"
       source 'server.xml.erb'
       mode '0640'
