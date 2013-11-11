@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.22"
+version          "13.5.24"
 
 #supports "centos"
 #supports "redhat"
@@ -29,11 +29,22 @@ recipe "np_galaxy_cookbook::reconfigure_netpulse_properties",
   "reconfigure netpulse.properties"
 
 recipe "np_galaxy_cookbook::reconfigure_server_xml",
-  "reconfigure netpulse.properties"
+  "reconfigure server.xml"
 
 # == Default attributes
 
 ########
+default[:np_galaxy_cookbook][:tomcat][:conf] = "/etc/tomcat7"
+
+attribute "np_galaxy_cookbook/tomcat/conf",
+  :display_name => "tomcat configuration directory",
+  :description => "tomcat configuration directory",
+  :required => "optional",
+  :default => "/etc/tomcat7",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_tomcat_users_xml"
+  ]
+
 attribute "np_galaxy_cookbook/tomcat/rolename",
   :display_name => "tomcat rolename",
   :description => "The rolename",
@@ -198,3 +209,117 @@ attribute "np_galaxy_cookbook/netpulse_properties/partner_fitstudio_key",
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
+#####
+
+attribute "np_galaxy_cookbook/server_xml/db1_username",
+  :display_name => "db1_username",
+  :description => "db1_username",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db1_password",
+  :display_name => "db1_password",
+  :description => "db1_password",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db1_url",
+  :display_name => "db1_url",
+  :description => "db1_url",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db2_username",
+  :display_name => "db2_username",
+  :description => "db2_username",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db2_password",
+  :display_name => "db2_password",
+  :description => "db2_password",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db2_url",
+  :display_name => "db2_url",
+  :description => "db2_url",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+attribute "np_galaxy_cookbook/server_xml/db3_username",
+  :display_name => "db3_username",
+  :description => "db3_username",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db3_password",
+  :display_name => "db3_password",
+  :description => "db3_password",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db4_url",
+  :display_name => "db4_url",
+  :description => "db4_url",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+
+
+template "#{node[:np_galaxy_cokbook][:tomcat][:conf]}/server.xml" do
+      cookbook "np_galaxy_cookbook"
+      source 'server.xml.erb'
+      mode '0640'
+      owner node[:np_galaxy_cookbook][:tomcat][:user]
+      group node[:np_galaxy_cookbook][:tomcat][:group]
+      variables(
+		:db1_username => node[:np_galaxy_cookbook][:tomcat][:db1_username],
+		:db1_password => node[:np_galaxy_cookbook][:tomcat][:db1_password],
+		:db1_url = > node[:np_galaxy_cookbook][:tomcat][:db1_url],
+
+		:db2_username => node[:np_galaxy_cookbook][:tomcat][:db2_username],
+		:db2_password => node[:np_galaxy_cookbook][:tomcat][:db2_password],
+		:db2_url = > node[:np_galaxy_cookbook][:tomcat][:db2_url],
+
+		:db3_username => node[:np_galaxy_cookbook][:tomcat][:db3_username],
+		:db3_password => node[:np_galaxy_cookbook][:tomcat][:db3_password],
+		:db3_url = > node[:np_galaxy_cookbook][:tomcat][:db3_url],
+
+		:db4_username => node[:np_galaxy_cookbook][:tomcat][:db4_username],
+		:db4_password => node[:np_galaxy_cookbook][:tomcat][:db4_password],
+		:db4_url = > node[:np_galaxy_cookbook][:tomcat][:db4_url],
+
+		:static_member_port => node[:np_galaxy_cookbook][:tomcat][:static_member_port],
+		:static_member_secure_port => node[:np_galaxy_cookbook][:tomcat][:static_member_secure_port],
+		:static_member_host => node[:np_galaxy_cookbook][:tomcat][:static_member_host],
+		:static_member_domain => node[:np_galaxy_cookbook][:tomcat][:static_member_domain],
+		:static_member_unique_id => node[:np_galaxy_cookbook][:tomcat][:static_member_unique_id]
+	)
+end
