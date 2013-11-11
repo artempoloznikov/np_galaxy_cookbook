@@ -271,6 +271,3 @@ attribute "np_galaxy_cookbook/server_xml/db3_password",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
-
-
-end
