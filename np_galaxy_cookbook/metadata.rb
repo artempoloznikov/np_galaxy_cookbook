@@ -205,7 +205,7 @@ attribute "np_galaxy_cookbook/server_xml/db1_username",
   :display_name => "db1_username",
   :description => "db1_username",
   :required => "recommended",
-#  :default => "",
+  :default => "",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
@@ -214,7 +214,7 @@ attribute "np_galaxy_cookbook/server_xml/db1_password",
   :display_name => "db1_password",
   :description => "db1_password",
   :required => "recommended",
-#  :default => "",
+  :default => "",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
@@ -223,7 +223,7 @@ attribute "np_galaxy_cookbook/server_xml/db1_url",
   :display_name => "db1_url",
   :description => "db1_url",
   :required => "recommended",
-#  :default => "",
+  :default => "",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
@@ -281,18 +281,10 @@ attribute "np_galaxy_cookbook/server_xml/db4_url",
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
 
-attribute "np_galaxy_cookbook/server_xml/",
-  :display_name => "",
-  :description => "",
-  :required => "recommended",
-  :default => "",
-  :recipes => [
-    "np_galaxy_cookbook::reconfigure_server_xml"
-  ]
 #		:static_member_port => node[:np_galaxy_cookbook][:tomcat][:static_member_port],
 #		:static_member_secure_port => node[:np_galaxy_cookbook][:tomcat][:static_member_secure_port],
 #		:static_member_host => node[:np_galaxy_cookbook][:tomcat][:static_member_host],
 #		:static_member_domain => node[:np_galaxy_cookbook][:tomcat][:static_member_domain],
 #		:static_member_unique_id => node[:np_galaxy_cookbook][:tomcat][:static_member_unique_id]
-#	)
+
 end
