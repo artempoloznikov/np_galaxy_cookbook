@@ -33,7 +33,6 @@ default[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_rolename] = "manager-gui
 default[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_username] = "admin"
 default[:np_galaxy_cookbook][:tomcat_users_xml][:tomcat_password] = "secret_password"
 
-
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_env] = "dev"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_summary_test_mode] = "true"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_summary_job_status] = "off"

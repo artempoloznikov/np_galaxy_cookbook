@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.27"
+version          "13.5.28"
 
 #supports "centos"
 #supports "redhat"
@@ -205,7 +205,7 @@ attribute "np_galaxy_cookbook/server_xml/db1_username",
   :display_name => "db1_username",
   :description => "db1_username",
   :required => "recommended",
-  :default => "",
+#  :default => "",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
@@ -214,7 +214,7 @@ attribute "np_galaxy_cookbook/server_xml/db1_password",
   :display_name => "db1_password",
   :description => "db1_password",
   :required => "recommended",
-  :default => "",
+#  :default => "",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
@@ -223,7 +223,7 @@ attribute "np_galaxy_cookbook/server_xml/db1_url",
   :display_name => "db1_url",
   :description => "db1_url",
   :required => "recommended",
-  :default => "",
+#  :default => "",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
