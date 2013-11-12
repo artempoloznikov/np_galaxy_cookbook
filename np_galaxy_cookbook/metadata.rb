@@ -238,8 +238,8 @@ attribute "np_galaxy_cookbook/server_xml/db1_url",
   ]
 
 attribute "np_galaxy_cookbook/server_xml/db2_source",
-  :display_name => "db1_source",
-  :description => "db1_source",
+  :display_name => "db2_source",
+  :description => "db2_source",
   :required => "recommended",
   :default => "MainSlaveDataSource",
   :recipes => [
@@ -274,8 +274,8 @@ attribute "np_galaxy_cookbook/server_xml/db2_url",
   ]
 
 attribute "np_galaxy_cookbook/server_xml/db3_source",
-  :display_name => "db1_source",
-  :description => "db1_source",
+  :display_name => "db3_source",
+  :description => "db3_source",
   :required => "recommended",
   :default => "TitanDataSource",
   :recipes => [

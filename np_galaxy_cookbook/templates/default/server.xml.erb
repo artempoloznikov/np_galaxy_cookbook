@@ -45,7 +45,7 @@
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
               pathname="conf/tomcat-users.xml" />
 
-    <Resource name="jdbc/MainDataSource"
+    <Resource name="jdbc/<%= @tomcat_db1_source %>"
               auth="Container"
               type="javax.sql.DataSource"
               username="<%= @tomcat_db1_username %>"
@@ -56,7 +56,7 @@
               maxActive="10"
               maxIdle="10"/>
 
-    <Resource name="jdbc/MainSlaveDataSource"
+    <Resource name="jdbc/<%= @tomcat_db2_source %>"
               auth="Container"
               type="javax.sql.DataSource"
               username="<%= @tomcat_db2_username %>"
@@ -67,7 +67,7 @@
               maxActive="10"
               maxIdle="10"/>
 
-    <Resource name="jdbc/TitanDataSource"
+    <Resource name="jdbc/<%= @tomcat_db3_source %>"
               auth="Container"
               type="javax.sql.DataSource"
               username="<%= @tomcat_db3_username %>"
@@ -78,7 +78,7 @@
               maxActive="10"
               maxIdle="10"/>
 
-    <Resource name="jdbc/ReportDataSource"
+    <Resource name="jdbc/<%= @tomcat_db4_source %>"
               auth="Container"
               type="javax.sql.DataSource"
               username="<%= @tomcat_db4_username %>"
