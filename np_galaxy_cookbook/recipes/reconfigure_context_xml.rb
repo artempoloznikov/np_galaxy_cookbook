@@ -11,7 +11,7 @@ template "#{node[:np_galaxy_cookbook][:tomcat][:conf]}/context.xml" do
 
 		:tomcat_db3_source => node[:np_galaxy_cookbook][:server_xml][:db3_source],
 
-		:tomcat_db4_source => node[:np_galaxy_cookbook][:server_xml][:db4_source],
+		:tomcat_db4_source => node[:np_galaxy_cookbook][:server_xml][:db4_source]
 
 	)
 end

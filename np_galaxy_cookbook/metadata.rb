@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.33"
+version          "13.5.34"
 
 #supports "centos"
 #supports "redhat"
@@ -30,6 +30,15 @@ recipe "np_galaxy_cookbook::reconfigure_netpulse_properties",
 
 recipe "np_galaxy_cookbook::reconfigure_server_xml",
   "reconfigure server.xml"
+
+recipe "np_galaxy_cookbook::reconfigure_context_xml",
+  "reconfigure context.xml"
+
+recipe "np_galaxy_cookbook::reconfigure_log4j_properties",
+  "reconfigure log4j.properties"
+
+recipe "np_galaxy_cookbook::reconfigure_ehcache_xml",
+  "reconfigure ehcache.xml"
 
 # == Default attributes
 
@@ -381,5 +390,54 @@ attribute "np_galaxy_cookbook/server_xml/static_member_unique_id",
   :default => "{2,0,1,3,0,1,0,8,0,0,0,0,0,0,0,2}",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+### log4j.properties
+
+attribute "np_galaxy_cookbook/log4j_properties/default_file",
+  :display_name => "default file",
+  :description => "default log file",
+  :required => "recommended",
+  :default => "/var/log/tomcat/netpulse.log",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_log4j_properties"
+  ]
+
+attribute "np_galaxy_cookbook/log4j_properties/default_conversion_pattern",
+  :display_name => "default_conversion_pattern",
+  :description => "default_conversion_pattern",
+  :required => "recommended",
+  :default => "%d %-5p [%c{1}] (%13F:%L)::  %m%n",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_log4j_properties"
+  ]
+
+attribute "np_galaxy_cookbook/log4j_properties/std_conversion_pattern",
+  :display_name => "STD conversion pattern",
+  :description => "STD conversion pattern",
+  :required => "recommended",
+  :default => "%d %5p [%c{1}] (%C:%L): %m%n",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_log4j_properties"
+  ]
+
+attribute "np_galaxy_cookbook/log4j_properties/loglevel",
+  :display_name => "loglevel",
+  :description => "loglevel",
+  :required => "recommended",
+  :default => "DEBUG",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_log4j_properties"
+  ]
+
+### ehcache.xml
+
+attribute "np_galaxy_cookbook/ehcache/disk_store_path",
+  :display_name => "ehcache disk store path",
+  :description => "ehcache disk store path",
+  :required => "recommended",
+  :default => "/tmp/ehcache_galaxy_data",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_log4j_properties"
   ]
 
