@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.32"
+version          "13.5.33"
 
 #supports "centos"
 #supports "redhat"
@@ -199,7 +199,7 @@ attribute "np_galaxy_cookbook/netpulse_properties/partner_fitstudio_key",
     "np_galaxy_cookbook::reconfigure_netpulse_properties"
   ]
 
-#####
+##### server.xml
 
 attribute "np_galaxy_cookbook/server_xml/db1_username",
   :display_name => "db1_username",
@@ -254,6 +254,7 @@ attribute "np_galaxy_cookbook/server_xml/db2_url",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
+
 attribute "np_galaxy_cookbook/server_xml/db3_username",
   :display_name => "db3_username",
   :description => "db3_username",
@@ -271,3 +272,78 @@ attribute "np_galaxy_cookbook/server_xml/db3_password",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
+
+attribute "np_galaxy_cookbook/server_xml/db4_username",
+  :display_name => "db4_username",
+  :description => "db4_username",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db4_password",
+  :display_name => "db4_password",
+  :description => "db4_password",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db4_url",
+  :display_name => "db4_url",
+  :description => "db4_url",
+  :required => "recommended",
+  :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+#attribute "np_galaxy_cookbook/server_xml/static_member_port",
+#  :display_name => "static_member_port",
+#  :description => "static_member_port",
+#  :required => "recommended",
+#  :default => "4000",
+#  :recipes => [
+#    "np_galaxy_cookbook::reconfigure_server_xml"
+#  ]
+
+#    :static_member_secure_port => node[:np_galaxy_cookbook][:tomcat][:static_member_secure_port],
+#attribute "np_galaxy_cookbook/server_xml/static_member_secure_port",
+#  :display_name => "static_member_secure_port",
+#  :description => "static_member_secure_port",
+#  :required => "recommended",
+#  :default => "-1",
+#  :recipes => [
+#    "np_galaxy_cookbook::reconfigure_server_xml"
+#  ]
+
+
+attribute "np_galaxy_cookbook/server_xml/static_member_host",
+  :display_name => "static_member_host",
+  :description => "static_member_host",
+  :required => "recommended",
+  :default => "dev-app-2.netpulse.ws",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/static_member_domain",
+  :display_name => "static_member_domain",
+  :description => "static_member_domain",
+  :required => "recommended",
+  :default => "dev-cluster",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/static_member_unique_id",
+  :display_name => "static_member_unique_id",
+  :description => "static_member_unique_id",
+  :required => "recommended",
+  :default => "{2,0,1,3,0,1,0,8,0,0,0,0,0,0,0,2}",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
