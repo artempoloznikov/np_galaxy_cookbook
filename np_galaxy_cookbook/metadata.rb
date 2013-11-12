@@ -201,6 +201,15 @@ attribute "np_galaxy_cookbook/netpulse_properties/partner_fitstudio_key",
 
 ##### server.xml
 
+attribute "np_galaxy_cookbook/server_xml/db1_source",
+  :display_name => "db1_source",
+  :description => "db1_source",
+  :required => "recommended",
+  :default => "MainDataSource",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
 attribute "np_galaxy_cookbook/server_xml/db1_username",
   :display_name => "db1_username",
   :description => "db1_username",
@@ -224,6 +233,15 @@ attribute "np_galaxy_cookbook/server_xml/db1_url",
   :description => "db1_url",
   :required => "recommended",
   :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db2_source",
+  :display_name => "db1_source",
+  :description => "db1_source",
+  :required => "recommended",
+  :default => "MainSlaveDataSource",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
@@ -255,6 +273,15 @@ attribute "np_galaxy_cookbook/server_xml/db2_url",
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
 
+attribute "np_galaxy_cookbook/server_xml/db3_source",
+  :display_name => "db1_source",
+  :description => "db1_source",
+  :required => "recommended",
+  :default => "TitanDataSource",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
 attribute "np_galaxy_cookbook/server_xml/db3_username",
   :display_name => "db3_username",
   :description => "db3_username",
@@ -269,6 +296,15 @@ attribute "np_galaxy_cookbook/server_xml/db3_password",
   :description => "db3_password",
   :required => "recommended",
   :default => "",
+  :recipes => [
+    "np_galaxy_cookbook::reconfigure_server_xml"
+  ]
+
+attribute "np_galaxy_cookbook/server_xml/db4_source",
+  :display_name => "db4_source",
+  :description => "db4_source",
+  :required => "recommended",
+  :default => "ReportDataSource",
   :recipes => [
     "np_galaxy_cookbook::reconfigure_server_xml"
   ]
