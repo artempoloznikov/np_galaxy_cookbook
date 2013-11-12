@@ -41,3 +41,8 @@ default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_workout_error_distrib
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_email_enabled] = "true"
 default[:np_galaxy_cookbook][:netpulse_properties][:tomcat_partner_fitstudio_key] = "secret_key"
 
+default[:np_galaxy_cookbook][:server_xml][:db1_username] = "db1_username"
+default[:np_galaxy_cookbook][:server_xml][:db1_password] = "db1_password"
+default[:np_galaxy_cookbook][:server_xml][:db1_url] = "db1_url"
+
+
