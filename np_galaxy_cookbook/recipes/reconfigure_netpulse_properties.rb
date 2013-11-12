@@ -9,7 +9,7 @@ template "#{node[:np_galaxy_cookbook][:tomcat][:conf]}/netpulse.properties" do
             :tomcat_workout_summary_test_mode => node[:np_galaxy_cookbook][:netpulse_properties][:workout_summary_test_mode],
             :tomcat_workout_summary_job_status => node[:np_galaxy_cookbook][:netpulse_properties][:workout_summary_job_status],
             :tomcat_site_host => node[:np_galaxy_cookbook][:netpulse_properties][:site_host],
-            :tomcat_memcached_server_list => node[:np_galaxy_cookbook][:netpulse_properties][:memcached_serverList],
+            :tomcat_memcached_server_list => node[:np_galaxy_cookbook][:netpulse_properties][:memcached_server_list],
             :tomcat_embedded_activemq_data_directory => node[:np_galaxy_cookbook][:netpulse_properties][:embedded_activemq_data_directory],
             :tomcat_workout_image_path => node[:np_galaxy_cookbook][:netpulse_properties][:workout_image_path],
             :tomcat_workout_error_path => node[:np_galaxy_cookbook][:netpulse_properties][:workout_error_path],
