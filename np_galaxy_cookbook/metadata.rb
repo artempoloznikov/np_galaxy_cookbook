@@ -432,7 +432,7 @@ attribute "np_galaxy_cookbook/log4j_properties/loglevel",
 
 ### ehcache.xml
 
-attribute "np_galaxy_cookbook/ehcache/disk_store_path",
+attribute "np_galaxy_cookbook/ehcache_xml/disk_store_path",
   :display_name => "ehcache disk store path",
   :description => "ehcache disk store path",
   :required => "recommended",
