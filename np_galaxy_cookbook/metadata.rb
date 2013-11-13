@@ -3,7 +3,7 @@ maintainer_email "artempoloznikov@clearscale.net"
 license          "None"
 description      "Cookbook provides tomcat application server implementation."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.34"
+version          "13.5.35"
 
 #supports "centos"
 #supports "redhat"
@@ -438,6 +438,6 @@ attribute "np_galaxy_cookbook/ehcache_xml/disk_store_path",
   :required => "recommended",
   :default => "/tmp/ehcache_galaxy_data",
   :recipes => [
-    "np_galaxy_cookbook::reconfigure_log4j_properties"
+    "np_galaxy_cookbook::reconfigure_ehcache_xml"
   ]
 
